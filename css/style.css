@@ -3,6 +3,7 @@
     --pge2-color: rgb(231, 166, 81) ;
     --pge3-color: rgb(233, 82, 90) ;
     --pge4-color: rgb(77, 82, 220) ;
+    --animation-time: 1.8s;
 }
 
 body{
@@ -44,4 +45,36 @@ body{
 
 .btn:hover{
     background-color: rgb(205, 70, 70);
+}
+
+#page1 h1{
+    transform:  translateY(-1200px);
+    animation: heading var(--animation-time) forwards
+    ease-in;
+}
+#page1 p{
+    transform:  translateX(1200px);
+    animation: texts var(--animation-time) forwards
+    ease-in;
+}
+#page1 #btnpge1{
+    transform:  translateY(1200px);
+    animation: buttn var(--animation-time) forwards
+    ease-in;
+}
+
+@keyframes heading {
+    to{
+        transform: translateY(0);
+    }
+}
+@keyframes buttn {
+    to{
+        transform: translateY(0);
+    }
+}
+@keyframes texts {
+    to{
+        transform: translateX(0);
+    }
 }
